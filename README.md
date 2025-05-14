@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Frontend para publicar anuncios en SemiNuevos.com
 
-## Getting Started
+> ⚠️ **Advertencia:** Antes de iniciar el proyecto, asegúrate de que la API del backend esté en ejecución y accesible en:
+>
+> - `http://localhost:3333/api/publish`
 
-First, run the development server:
+**🚀 Empezando**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+  1. Instala las dependencias:
+     ```bash
+     npm install
+     ```
+  2. Inicia el servidor de desarrollo:
+     ```bash
+     npm run dev
+     ```
+  3. Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**📂 Estructura del Proyecto**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+  - Rutas de API:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+    - `/src/app/api/posts/route.ts` — Redirige solicitudes POST al backend:
 
-## Learn More
+      ```ts
+      import { NextRequest, NextResponse } from "next/server";
 
-To learn more about Next.js, take a look at the following resources:
+      export async function POST(req: NextRequest) {
+        // Implementación del proxy mostrada en el código original
+      }
+      ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**🔍 Más Información**
+- Proyecto Next.js creado con [create-next-app](https://nextjs.org/).
+  - Tecnologías clave:
+    - Next.js App Router
+    - TypeScript
+    - MUI (Material-UI)
+    - Tailwind CSS
+    - Turbopack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Evidencias de funcionalidad
+<img width="1384" alt="Screenshot 2025-05-14 at 12 20 19 a m" src="https://github.com/user-attachments/assets/b3bb2a63-7126-4fec-abf9-b744d4a25aee" />
+<img width="1384" alt="Screenshot 2025-05-14 at 12 20 33 a m" src="https://github.com/user-attachments/assets/b5f59161-5c8c-4452-beea-d85924bf3630" />
+<img width="1383" alt="Screenshot 2025-05-14 at 12 22 32 a m" src="https://github.com/user-attachments/assets/62ce0c73-64a2-475d-96e1-718dc877c284" />
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
